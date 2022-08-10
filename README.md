@@ -63,7 +63,7 @@ Purchase: [ebay - ALISHA Mini / PENELOPE](https://www.ebay.com/itm/403655001475)
 * Download and install the ATtiny 85 Digispark board in the Arduino IDE following instructions from [here](http://digistump.com/wiki/digispark/tutorials/connecting)
 * Download and install the [OneButton](https://github.com/mathertel/OneButton) libary.
 * Download and install the [SendOnlySoftwareSerial](https://github.com/nickgammon/SendOnlySoftwareSerial) library.
-* USB Micro cable compable of data transfer.
+* USB Micro cable capable of data transfer.
 ---
 ### Modifying code for the Walsh 85 helmet or NeoPixels
 
