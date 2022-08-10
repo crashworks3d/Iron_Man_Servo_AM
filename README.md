@@ -66,6 +66,7 @@ Purchase: [ebay - ALISHA Mini / PENELOPE](https://www.ebay.com/itm/403655001475)
 * USB Micro cable compable of data transfer.
 ---
 ### Modifying code for the Walsh 85 helmet or NeoPixels
+
 In progress.  Instructions will be provided at a later date.
 ---
 ### Uploading Code To AM Board:
