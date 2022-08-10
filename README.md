@@ -65,7 +65,14 @@ Purchase: [ebay - ALISHA Mini / PENELOPE](https://www.ebay.com/itm/403655001475)
 * Download and install the [SendOnlySoftwareSerial](https://github.com/nickgammon/SendOnlySoftwareSerial) library.
 * USB Micro cable capable of data transfer.
 ---
-### Modifying code for the Walsh 85 helmet or NeoPixels
+### Modifying code for the Walsh 85 helmet
+
+In progress.  Instructions will be provided at a later date.
+
+### Modifying code for sound
+
+In progress.  Instructions will be provided at a later date.
+### Modifying code for NeoPixels
 
 In progress.  Instructions will be provided at a later date.
 
