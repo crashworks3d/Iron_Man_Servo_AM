@@ -38,7 +38,7 @@ DEVELOPED BY
 #define VERSION "0.0.1.7"
 
 // Uncomment this line to enable sound for the S.U.E. expansion board
-#define SOUND     
+// #define SOUND     
 
 // Uncomment this line if implementing using WS2812 LEDs (NeoPixels)
 // #define PIXELS
