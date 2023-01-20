@@ -56,6 +56,8 @@ Purchase: [ebay - ALISHA Mini / PENELOPE](https://www.ebay.com/str/crashworks3d)
 
 [![alt text](images/AM4_Board_Label.png)](https://www.ebay.com/str/crashworks3d)
 
+[![alt text](images/AM4_W85_Board_Label.png)](https://www.ebay.com/str/crashworks3d)
+
 ### Prerequisites
 
 * Some experience with [Arduino](https://www.arduino.cc/)
