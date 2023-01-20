@@ -52,9 +52,9 @@ You can download the 3D printable servo kit from Thingiverse:
 
 **_A.L.I.S.H.A._ - Arduino nano Led & Integrated Servo Helmet Actuator for 3D Printed Helmets**
 
-Purchase: [ebay - ALISHA Mini / PENELOPE](https://www.ebay.com/itm/403655001475)
+Purchase: [ebay - ALISHA Mini / PENELOPE](https://www.ebay.com/str/crashworks3d)
 
-[![alt text](images/AM4_Board_Label.png)](https://www.ebay.com/itm/403655001475)
+[![alt text](images/AM4_Board_Label.png)](https://www.ebay.com/str/crashworks3d)
 
 ### Prerequisites
 
@@ -77,33 +77,8 @@ In progress.  Instructions will be provided at a later date.
 In progress.  Instructions will be provided at a later date.
 
 ---
-### Uploading Code To AM Board:
+### Uploading Code To AM Board see: [UPLOAD_CODE](docs/UPLOAD_CODE.md)
 
-# !!! WARNING: Failure to unplug servos and direct power to board prior to uploading can damage the board!!! 
-
-1. Download the code from this repository by clicking on "Code -> Download Zip".
-2. On your computer unzip the downloaded file.
-3. Rename the unzipped folder to "Spiderman_Servo_AM".
-4. Using the Arduino IDE, open the file "Spiderman_Servo_AM.ino".
-5.  In the Arduino IDE be sure to set the appropriate board _Digispark (Default - 16.5mhz)_ and ports to match your environment.
-6. Click on the "Upload" icon which will complile the code.
-7. In the output pane you will be prompted with the following:
-```
-Running Digispark Uploader...
-Plug in device now... (will timeout in 60 seconds)
-```
-
-8. Plug your USB C cable into your computer and AM board.
-9. Succesfull upload will look like this:
-```
-> Starting to upload ...
-writing: 70% complete
-writing: 75% complete
-writing: 80% complete
-> Starting the user app ...
-running: 100% complete
->> Micronucleus done. Thank you!
-```
 ---
 ## Button Functions
 * Single Press: Faceplate open/close

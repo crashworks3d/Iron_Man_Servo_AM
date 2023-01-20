@@ -2,8 +2,9 @@
 
 The purpose of this document is to provide instructions for uploading the code that runs the A.L.I.S.H.A. Mini board. Uploading code to the ATTiny85 module is also called "flashing".
 
-# WARNING!!!
-**Failure to properly follow the instructions could result in "crashing" the board and making it inoperable!**
+# !!! WARNING: Failure to properly follow the instructions could result in "crashing" the board and making it inoperable!!!
+
+# !!! WARNING: Failure to unplug servos and direct power to board prior to uploading can damage the board!!! 
 
 ---
 ## Pre-requisites
