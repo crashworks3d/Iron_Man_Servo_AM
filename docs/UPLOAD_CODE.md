@@ -11,9 +11,7 @@ The purpose of this document is to provide instructions for uploading the code t
 
 1. Download and install Arduino IDE from [here](https://www.arduino.cc/en/software).
 
-2. Download and install the ATtiny 85 Digispark board in the Arduino IDE following instructions from [here](http://digistump.com/wiki/digispark/tutorials/connecting)
-
-3. USB Micro cable capable of data transfer.
+2. USB Micro cable capable of data transfer.
 
 ## Install the Digispark ATTiny85 drivers
 
