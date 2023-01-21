@@ -15,9 +15,23 @@ The purpose of this document is to provide instructions for uploading the code t
 
 3. USB Micro cable capable of data transfer.
 
+## Install the Digispark ATTiny85 drivers
+
+1. Open the Arduino IDE, and go to *File > Preferences*
+
+2. In the **Additional Boards Manager URLs** field, enter the following link: `http://digistump.com/package_digistump_index.json`
+
+3. Go to **Tools > Board > Boards Manager**
+
+4. Search for **Digistump AVR**, and click on **Install**
+
+5. Once the drivers are installed click the close button on the **Boards Manager** dialogue box.
+
+6. Go to **Tools > Board > Digistump AVR Boards** and select **Digispark (Default - 16.5mhz)**
+
 ## Download the code
 
-1. Go to the GitHub repository with the Crashworkd 3D *"Iron Man Servo AM"*: https://github.com/crashworks3d/Iron_Man_Servo_AM.
+1. Using your browser, go to the GitHub repository with the Crashworkd 3D *"Iron Man Servo AM"*: https://github.com/crashworks3d/Iron_Man_Servo_AM.
 
 2. Look for the "Code" button, it should be located on the top right of the page, next to the "Issues" and "Pull requests" tabs.
 
