@@ -43,19 +43,19 @@ The purpose of this document is to provide instructions for uploading the code t
 
 1. Open the Arduino IDE program.
 
-2. In the menu select "Sketch > Include Library > Manage Libraries..."
+2. In the menu select **Sketch > Include Library > Manage Libraries...**
 
-3. In the Library Manager dialogue box type "OneButton" in the search box.
+3. In the Library Manager dialogue box type **OneButton** in the search box.
 
-4. In the "OneButton" panel click on the "Install" button and wait for the library to install then close the Library Manager dialogue box.
+4. In the **OneButton** panel click on the **Install** button and wait for the library to install then close the Library Manager dialogue box.
 
-5. Install the "SendOnlySoftwareSerial" by going to https://github.com/nickgammon/SendOnlySoftwareSerial and following the installation instructions there.
+5. Install the `SendOnlySoftwareSerial` by going to https://github.com/nickgammon/SendOnlySoftwareSerial and following the installation instructions there.
 
 ## Configure the code for the proper board type and features
 
-1. In the Arduino IDE program the code file by selecting in the menu "File > Open..." and selecting the file "Iron_Man_Servo_AM.ino" you downloaded in the previous steps "Download the code".
+1. In the Arduino IDE program the code file by selecting in the menu **File > Open...** and selecting the file `Iron_Man_Servo_AM.ino` you downloaded in the previous steps "Download the code".
 
-2. Select the correct board type by selecting in the menu "Tools > Board > Digistump AVR Boards > Digispark (Default 16.5mhz)
+2. Select the correct board type by selecting in the menu **Tools > Board > Digistump AVR Boards > Digispark (Default 16.5mhz)**
 
 3. If you have the AM4 board only, skip to step 6.
 
