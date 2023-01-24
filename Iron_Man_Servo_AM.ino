@@ -58,7 +58,10 @@ DEVELOPED BY
 // Referenced libraries
 
 // For installation instructions see https://github.com/adafruit/Adafruit_SoftServo
+
 #include "Adafruit_SoftServo.h"
+#define PWM_HIGH 2400 //2000
+#define PWM_LOW   400 //1000
 
 // For installation instructions see: https://github.com/mathertel/OneButton
 #include <OneButton.h>
@@ -389,11 +392,11 @@ void playSoundEffect(int soundEffect){
  * 
  */
 void servosAttach(){
-  servo1.attach(SERVO1_PIN);
-  servo2.attach(SERVO2_PIN);
+  servo1.attach(SERVO1_PIN, PWM_HIGH, PWM_LOW);
+  servo2.attach(SERVO2_PIN, PWM_HIGH, PWM_LOW);
 
   #ifdef WALSH85
-  servo3.attach(SERVO3_PIN);
+  servo3.attach(SERVO3_PIN, PWM_HIGH, PWM_LOW);
   #endif
 }
 
