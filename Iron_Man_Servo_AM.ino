@@ -45,7 +45,7 @@ DEVELOPED BY
 
 // Uncomment this line to enable Walsh MK85 Jaw Control (Open/Close)
 // WARNING!!! Enabling WALSH85 Code will only compile/work with the correct combinations/configurations
-// #define WALSH85
+//#define WALSH85
 
 #if defined (SOUND) && defined (WALSH85)
 #error "Invalid configuration.  Cannot compile both SOUND and WALSH85 code."
@@ -60,8 +60,44 @@ DEVELOPED BY
 // For installation instructions see https://github.com/adafruit/Adafruit_SoftServo
 
 #include "Adafruit_SoftServo.h"
-#define PWM_HIGH 2400 //2000
-#define PWM_LOW   400 //1000
+// Servo PWM Range is determined by: (Time/Frequency) x Duty Cycle(%) , Time is based on 1 second (1,000,000 Micro-Seconds) , Frequency in Hertz, and Duty Cycle as (% / 100)
+// Example using MG90s Servos with a time of 1 Second (1,000,000 micro-Seconds) and Frequency of 50Hz (Hertz) and normal duty Cycle of .02 (2% Low) & .12 (12% High)  
+// PWM_LOW = (1000000/50) x .02 , PWM_LOW = 400    <-- Optimal Setting for Authentic Tower Pro MG90s Servo
+// PWM_HIGH = (1000000/50) x .12 , PWM_HIGH = 2400 <-- Optimal Setting for Authentic Tower Pro MG90s Servo
+
+#define TPMG90S
+//#define GENERIC
+//#define MANUAL
+
+// TODO: Implement manual, throw error codes
+// TOTO: Implement SOS blinking if button is permanently connected
+
+//#define PWM_HIGH 2000 // Servo using 10% Duty Cycle
+//#define PWM_LOW  1000 // Servo using 5% Duty Cycle
+
+#ifdef TPMG90S
+#define PWM_HIGH 2400 // Authentic Tower Pro MG90s Servo using 12% Duty Cycle
+#define PWM_LOW  400 // Authentic Tower Pro MG90s Servo using 2% Duty Cycle
+#endif
+
+#ifdef GENERIC
+#define PWM_HIGH 2600 // Generic MG90s Servo using 13% Duty Cycle
+#define PWM_LOW  200 // Generic MG90s Servo using 1% Duty Cycle
+#endif
+
+// Use these settings for manual configuration of servos
+#ifdef MANUAL
+#define PWM_HIGH 2400 // Authentic Tower Pro MG90s Servo using 12% Duty Cycle
+#define PWM_LOW  400 // Authentic Tower Pro MG90s Servo using 2% Duty Cycle
+#endif
+
+#if !defined (TPMG90S)  && !defined (GENERIC) && !defined (MANUAL)
+  #error At least one servo configuration needs to be defined.
+#endif
+
+#if (defined (TPMG90S) && defined (GENERIC) && defined (MANUAL)) || (defined (TPMG90S) && defined (GENERIC)) || (defined (GENERIC) && defined (MANUAL)) || (defined (TPMG90S) && defined (MANUAL))
+  #error More than one servo configuration defined.  Only define one: TPMG90S, GENERIC, or MANUAL
+#endif
 
 // For installation instructions see: https://github.com/mathertel/OneButton
 #include <OneButton.h>
@@ -119,21 +155,27 @@ DEVELOPED BY
 #define SERVO_OPEN_SPEED                         0 // set the speed of the servo opening recommend set to max speed to aid in lift (0 = Max Speed  / 10000 = Slowest Speed) 
 
 //Servo 3 (Walsh85 Jaw Control) variables for servo speed control
-#define JAW_CLOSE_SPEED                        500 // set the speed of the servo close function (0 = Max Speed  / 10000 = Slowest Speed) 
+#define JAW_CLOSE_SPEED                        400 // set the speed of the servo close function (0 = Max Speed  / 10000 = Slowest Speed) , Originally Set to 500
 #define JAW_OPEN_SPEED                           0 // set the speed of the servo opening recommend set to max speed to aid in lift (0 = Max Speed  / 10000 = Slowest Speed) 
 
 // In Dual Servo Configuration the servos move in opposing directions, so the angles of the servos will be opposite to each other. 
 // Normal Servo range is 0° ~ 180°, for initial setup the range has been adjusted to 20° ~ 160°, this allows for a 20° adjustment at both ends of the servo range.
 // See Helmet tutorial for further information on servo setup.
-#define SERVO1_OPEN_POS                         20 // set the open position of servo 1
+// TODO: Error code if out of range
+#define SERVO1_OPEN_POS                         0 // set the open position of servo 1
 #define SERVO2_OPEN_POS                        160 // set the open position of servo 2
 #define SERVO1_CLOSE_POS                       160 // set the closed position of servo 1
 #define SERVO2_CLOSE_POS                        20 // set the closed position of servo 2
 
+
+#if defined (GENERIC) && (SERVO1_OPEN_POS < 10) || (SERVO2_CLOSE_POS < 10) || (SERVO2_OPEN_POS > 170) || (SERVO1_CLOSE_POS > 170)
+  #error This servo configuration will not operate in a position less than 10° or greater than 170° 
+#endif
+
 #ifdef WALSH85
-//Servo 3 (Walsh85 Jaw Control) Open / Close Angle
-#define SERVO3_OPEN_POS                         90 // set the open position of servo 3
-#define SERVO3_CLOSE_POS                         0 // set the closed position of servo 3
+//Servo 3 (Walsh85 Jaw Control) Open / Close Angle , 90° range of motion, do not set close angle to 0°, actual starting point is 10°
+#define SERVO3_OPEN_POS                        100 // set the open position of servo 3
+#define SERVO3_CLOSE_POS                        10 // set the closed position of servo 3
 #endif
 
 #ifdef PIXELS
