@@ -35,7 +35,7 @@ DEVELOPED BY
 */
 
 // Version.  Don't change unless authorized by Cranshark
-#define VERSION "0.0.1.7"
+#define VERSION "0.1.0.1"
 
 // Uncomment this line to enable sound for the S.U.E. expansion board
 // #define SOUND     
