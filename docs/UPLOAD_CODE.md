@@ -124,4 +124,14 @@ running: 100% complete
 
 ### CONGRATULATIONS!! You did it!
 
+## Troubleshooting
 
+If you run into problems uploading the code and you've carefully followed all of the intstructions above...  Below are links to sites that can help with troubleshooting:
+
+[Installing Drivers and Programming the DigiSpark ATtiny85 dev boards - Tutorial](https://www.youtube.com/watch?v=MmDBvgrYGZs)
+
+[Topic: Bad CPU type in executable](https://digistump.com/board/index.php?topic=3249.0)
+
+**MacOS Only**
+
+[[SOLVED] avr-g++: bad CPU type in executable // Mac Os 10.15.2 Catalina](https://www.youtube.com/watch?v=xv1e6ZOBVfA)
