@@ -162,7 +162,7 @@ DEVELOPED BY
 // Normal Servo range is 0° ~ 180°, for initial setup the range has been adjusted to 20° ~ 160°, this allows for a 20° adjustment at both ends of the servo range.
 // See Helmet tutorial for further information on servo setup.
 // TODO: Error code if out of range
-#define SERVO1_OPEN_POS                         0 // set the open position of servo 1
+#define SERVO1_OPEN_POS                         20 // set the open position of servo 1
 #define SERVO2_OPEN_POS                        160 // set the open position of servo 2
 #define SERVO1_CLOSE_POS                       160 // set the closed position of servo 1
 #define SERVO2_CLOSE_POS                        20 // set the closed position of servo 2
