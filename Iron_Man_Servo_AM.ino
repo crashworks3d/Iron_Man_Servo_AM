@@ -69,12 +69,6 @@ DEVELOPED BY
 //#define GENERIC
 //#define MANUAL
 
-// TODO: Implement manual, throw error codes
-// TOTO: Implement SOS blinking if button is permanently connected
-
-//#define PWM_HIGH 2000 // Servo using 10% Duty Cycle
-//#define PWM_LOW  1000 // Servo using 5% Duty Cycle
-
 #ifdef TPMG90S
 #define PWM_HIGH 2400 // Authentic Tower Pro MG90s Servo using 12% Duty Cycle
 #define PWM_LOW  400 // Authentic Tower Pro MG90s Servo using 2% Duty Cycle
@@ -161,7 +155,6 @@ DEVELOPED BY
 // In Dual Servo Configuration the servos move in opposing directions, so the angles of the servos will be opposite to each other. 
 // Normal Servo range is 0° ~ 180°, for initial setup the range has been adjusted to 20° ~ 160°, this allows for a 20° adjustment at both ends of the servo range.
 // See Helmet tutorial for further information on servo setup.
-// TODO: Error code if out of range
 #define SERVO1_OPEN_POS                         20 // set the open position of servo 1
 #define SERVO2_OPEN_POS                        160 // set the open position of servo 2
 #define SERVO1_CLOSE_POS                       160 // set the closed position of servo 1
