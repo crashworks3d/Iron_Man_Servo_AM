@@ -81,8 +81,8 @@ DEVELOPED BY
 
 // Use these settings for manual configuration of servos
 #ifdef MANUAL
-#define PWM_HIGH 2400 // Authentic Tower Pro MG90s Servo using 12% Duty Cycle
-#define PWM_LOW  400 // Authentic Tower Pro MG90s Servo using 2% Duty Cycle
+#define PWM_HIGH 2400 // Manual Servo Duty Cycle
+#define PWM_LOW  400 //  Manual Servo Duty Cycle
 #endif
 
 #if !defined (TPMG90S)  && !defined (GENERIC) && !defined (MANUAL)
@@ -195,7 +195,7 @@ DEVELOPED BY
 #define SND_CLOSE                                 1 // sound track for helmet closing sound
 #define SND_JARVIS                                2 // sound track for JARVIS sound
 #define SND_OPEN                                  3 // sound track for helmet opening sound
-#define SND_STT                                   7 // Shoot to Thrill activated on long button press
+#define SND_STT                                   7 // music activated on long button press
 
 #if defined (__AVR_ATtiny88__)
 SendOnlySoftwareSerial serialObj(6); // Create object for serial communications TX only on pin pd6 (ATtiny88)
