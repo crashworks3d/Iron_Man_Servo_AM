@@ -35,7 +35,7 @@ DEVELOPED BY
 */
 
 // Version.  Don't change unless authorized by Cranshark
-#define VERSION "0.1.0.1"
+#define VERSION "0.1.1.2"
 
 // Uncomment this line to enable sound for the S.U.E. expansion board
 // #define SOUND     
@@ -280,7 +280,8 @@ void simDelayMicros(unsigned long period){
 void initPrimaryButton(){
   primaryButton.attachClick(handlePrimaryButtonSingleTap);
   primaryButton.attachDoubleClick(handlePrimaryButtonDoubleTap);
-  primaryButton.attachLongPressStart(handlePrimaryButtonLongPress);
+  //primaryButton.attachLongPressStart(handlePrimaryButtonLongPress);
+  primaryButton.attachDuringLongPress(handlePrimaryButtonLongPress);
   primaryButton.attachMultiClick(handlePrimaryButtonMultiPress);
 }
 
@@ -708,6 +709,47 @@ void ledEyesFade(){
     setLedEyes(curLedLevel);
 }
 
+/**
+ * @brief Blinks S-O-S
+*/
+void blinkSOS(){
+  int dotDelay = 200; // the delay between dots and dashes in milliseconds
+  int letterDelay = dotDelay * 3; // the delay between letters in milliseconds
+  int wordDelay = dotDelay * 7; // the delay between words in milliseconds
+
+  // Blink "S"
+  for (int i = 0; i < 3; i++){
+    simDelayMillis(dotDelay);
+    digitalWrite(EYE_LEFT_PIN, HIGH);
+    simDelayMillis(dotDelay);
+    digitalWrite(EYE_LEFT_PIN, LOW);
+  }
+
+  simDelayMillis(letterDelay);
+
+  // Blink "O"
+  for (int i = 0; i < 3; i++){
+    simDelayMillis(dotDelay * 3);
+    digitalWrite(EYE_LEFT_PIN, HIGH);
+    simDelayMillis(dotDelay * 3);
+    digitalWrite(EYE_LEFT_PIN, LOW);
+  }
+
+  simDelayMillis(letterDelay);
+
+  // Blink "S"
+  for (int i = 0; i < 3; i++){
+    simDelayMillis(dotDelay);
+    digitalWrite(EYE_LEFT_PIN, HIGH);
+    simDelayMillis(dotDelay);
+    digitalWrite(EYE_LEFT_PIN, LOW);
+  }
+
+  simDelayMillis(letterDelay);
+
+  simDelayMillis(wordDelay);
+}
+
 #if defined (__AVR_ATtiny88__) 
 /**
  * @brief Set the Aux Leds object
@@ -830,6 +872,7 @@ void handlePrimaryButtonDoubleTap(){
  * Event handler for when the primary button is pressed and held
  */
 void handlePrimaryButtonLongPress(){
+  blinkSOS(); // Switch is wired wrong, blink message on LED
   #ifdef SOUND
   playSoundEffect(SND_STT);
   #endif
