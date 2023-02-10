@@ -985,9 +985,9 @@ void setup() {
   initPixels(); // initialize the NEO LEDs
 #endif
 
-  initPrimaryButton(); // initialize the primary button
-
   startupFx(); // Run the initial features
+
+  initPrimaryButton(); // initialize the primary button
 }
 
 /**
