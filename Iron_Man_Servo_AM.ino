@@ -38,7 +38,7 @@ DEVELOPED BY
 #define VERSION "0.1.1.2"
 
 // Uncomment this line to enable sound for the S.U.E. expansion board
-// #define SOUND     
+#define SOUND     
 
 // Uncomment this line if implementing using WS2812 LEDs (NeoPixels)
 // #define PIXELS
@@ -81,8 +81,8 @@ DEVELOPED BY
 
 // Use these settings for manual configuration of servos
 #ifdef MANUAL
-#define PWM_HIGH 2400 // Manual Servo Duty Cycle
-#define PWM_LOW  400 //  Manual Servo Duty Cycle
+#define PWM_HIGH 9000 // Manual Servo Duty Cycle
+#define PWM_LOW  200 //  Manual Servo Duty Cycle
 #endif
 
 #if !defined (TPMG90S)  && !defined (GENERIC) && !defined (MANUAL)
