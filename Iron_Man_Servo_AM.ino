@@ -35,7 +35,7 @@ DEVELOPED BY
 */
 
 // Version.  Don't change unless authorized by Cranshark
-#define VERSION "0.1.1.2"
+#define VERSION "0.1.2.0"
 
 #include "config.h"
 
