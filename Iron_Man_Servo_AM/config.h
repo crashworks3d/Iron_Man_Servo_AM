@@ -1,5 +1,5 @@
 // Uncomment this line to enable sound for the S.U.E. expansion board
-#define SOUND
+//#define SOUND
 
 // Uncomment this line if implementing using WS2812 LEDs (NeoPixels)
 //#define PIXELS
@@ -13,8 +13,8 @@
 // PWM_LOW = (1000000/50) x .02 , PWM_LOW = 400    <-- Optimal Setting for Authentic Tower Pro MG90s Servo
 // PWM_HIGH = (1000000/50) x .12 , PWM_HIGH = 2400 <-- Optimal Setting for Authentic Tower Pro MG90s Servo
 
-#define TPMG90S
-//#define GENERIC
+//#define TPMG90S
+#define GENERIC
 //#define MANUAL
 
 #ifdef TPMG90S

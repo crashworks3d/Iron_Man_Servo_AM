@@ -93,7 +93,7 @@ In progress.  Instructions will be provided at a later date.
 
 ## Versioning
 
-Version Beta 0.1.0.1 (Use at your own risk) 
+Version Beta 1.0.1.0 (Use at your own risk) 
 
 ## Authors
 

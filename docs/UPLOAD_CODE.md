@@ -37,19 +37,7 @@ The purpose of this document is to provide instructions for uploading the code t
 
 4. Your browser will begin downloading the zip file containing the code.
 
-5. Once the download is complete, locate the zip file on your computer and extract the contents to a folder of your choice.  Make sure the folder name is "Iron_Man_Servo_AM".
-
-## Download and install the required libraries
-
-1. Open the Arduino IDE program.
-
-2. In the menu select **Sketch > Include Library > Manage Libraries...**
-
-3. In the Library Manager dialogue box type **OneButton** in the search box.
-
-4. In the **OneButton** panel click on the **Install** button and wait for the library to install then close the Library Manager dialogue box.
-
-5. Install the `SendOnlySoftwareSerial` by going to https://github.com/nickgammon/SendOnlySoftwareSerial and following the installation instructions there.
+5. Once the download is complete, locate the zip file on your computer and extract the contents to a folder of your choice.
 
 ## Configure the code for the proper board type and features
 
@@ -61,11 +49,13 @@ The purpose of this document is to provide instructions for uploading the code t
 
 4. If you have the AM4 with the "W85" (Walsh Mark 85 helmet):
 
-> - Go to line 48 that reads `// #define WALSH85`
+> - Open the `config.h` file
+> - Go the line that reads `// #define WALSH85`
 > - Remove the `//`
 
 5. If you have the AM3 board:
-> - Go to line 41 that reads `//#define SOUND`
+> - Open the `config.h` file
+> - Go the line that reads `//#define SOUND`
 > - Remove the `//`
 
 6. Verify that the code will compile by clicking on the icon with a check in it.  In the bar below the code you will see a message "Done compiling."

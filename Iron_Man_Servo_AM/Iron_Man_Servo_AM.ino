@@ -35,7 +35,7 @@ DEVELOPED BY
 */
 
 // Version.  Don't change unless authorized by Cranshark
-#define VERSION "0.1.2.0"
+#define VERSION "1.0.1.0"
 
 #include "config.h"
 
@@ -51,7 +51,7 @@ DEVELOPED BY
 
 // For installation instructions see https://github.com/adafruit/Adafruit_SoftServo
 
-#include "Adafruit_SoftServo.h"
+#include "lib/Adafruit_SoftServo.cpp"
 
 #if !defined (TPMG90S)  && !defined (GENERIC) && !defined (MANUAL)
   #error At least one servo configuration needs to be defined.
@@ -62,14 +62,14 @@ DEVELOPED BY
 #endif
 
 // For installation instructions see: https://github.com/mathertel/OneButton
-#include <OneButton.h>
+#include "lib/OneButton/src/OneButton.cpp"
 
 #ifdef SOUND
 // See: https://wiki.dfrobot.com/DFPlayer_Mini_SKU_DFR0299#target_6
 // Important!!! On the SD card copy the mp3 files into an mp3 directory
 // Download and install the DFPlayerMiniLite library
 
-#include "DFPlayerMiniCW3D.h"
+#include "lib/DFPlayerMiniCW3D.cpp"
 
 // For installation and usage instructions see: https://github.com/nickgammon/SendOnlySoftwareSerial
 #include <SendOnlySoftwareSerial.h>
@@ -88,6 +88,7 @@ DFPlayerMiniCW3D mp3Obj; // Create object for DFPlayer Mini
 
 #ifdef PIXELS
 // For installation instructions see https://github.com/cpldcpu/light_ws2812
+#include "lib/cRGB.h"
 #include "WS2812.h"
 #endif
 

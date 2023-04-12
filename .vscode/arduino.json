@@ -1,5 +1,5 @@
 {
     "board": "digistump:avr:digispark-tiny",
-    "sketch": "Iron_Man_Servo_AM.ino",
+    "sketch": "Iron_Man_Servo_AM/Iron_Man_Servo_AM.ino",
     "port": "/dev/tty.BLTH"
 }
