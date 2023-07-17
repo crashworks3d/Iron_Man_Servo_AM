@@ -41,13 +41,14 @@ The purpose of this document is to provide instructions for uploading the code t
 
 ## Configure the code for the proper board type and features
 
-1. In the Arduino IDE program the code file by selecting in the menu **File > Open...** and selecting the file `Iron_Man_Servo_AM.ino` you downloaded in the previous steps "Download the code".
+1. Carefully remove the ATTiny85 module from the board socket.
+2. In the Arduino IDE program the code file by selecting in the menu **File > Open...** and selecting the file `Iron_Man_Servo_AM.ino` you downloaded in the previous steps "Download the code".
 
-2. Select the correct board type by selecting in the menu **Tools > Board > Digistump AVR Boards > Digispark (Default 16.5mhz)**
+3. Select the correct board type by selecting in the menu **Tools > Board > Digistump AVR Boards > Digispark (Default 16.5mhz)**
 
-3. If you have the AM4 board only, skip to step 6.
+4. If you have the AM4 board only, skip to step 6.
 
-4. If you have the AM4 with the "W85" (Walsh Mark 85 helmet):
+5. If you have the AM4 with the "W85" (Walsh Mark 85 helmet):
 
 > - Open the `config.h` file
 > - Go the line that reads `// #define WALSH85`
