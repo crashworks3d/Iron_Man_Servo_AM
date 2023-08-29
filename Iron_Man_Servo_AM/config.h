@@ -29,8 +29,8 @@
 
 // Use these settings for manual configuration of servos
 #ifdef MANUAL
-#define PWM_HIGH 9000 // Manual Servo Duty Cycle
-#define PWM_LOW  200 //  Manual Servo Duty Cycle
+#define PWM_HIGH 2500 // Manual Servo Duty Cycle
+#define PWM_LOW  300 //  Manual Servo Duty Cycle
 #endif
 
 // Declare pin settings
