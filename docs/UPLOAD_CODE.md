@@ -46,7 +46,7 @@ The purpose of this document is to provide instructions for uploading the code t
 
 3. Select the correct board type by selecting in the menu **Tools > Board > Digistump AVR Boards > Digispark (Default 16.5mhz)**
 
-4. If you have the AM4 board only, skip to step 6.
+4. If you have the AM4 or AM6 board only, skip to step 6.
 
 5. If you have the AM4 with the "W85" (Walsh Mark 85 helmet):
 
