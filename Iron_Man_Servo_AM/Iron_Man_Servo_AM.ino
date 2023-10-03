@@ -798,35 +798,27 @@ void monitorPrimaryButton(){
  
 volatile uint8_t counter = 0;
 void monitorServoProcess(){
-#if defined (__AVR_ATtiny85__) 
+#if defined (__AVR_ATtiny85__) || defined(__AVR_ATtiny88__)
   // this gets called every 2 milliseconds
   counter += 2;
   // every 20 milliseconds, refresh the servos!
   if (counter >= 20) {  
     counter = 0;
-    servo1.refresh();
-    servo2.refresh();
+    if (servo1.attached()){
+      servo1.refresh();
+    }
+
+    if (servo2.attached()){
+      servo2.refresh();
+    }
 
     #ifdef WALSH85
-    servo3.refresh();
+    if (servo3.attached()){
+      servo3.refresh();
+    }
     #endif
   }
-#endif
-
-#if defined (__AVR_ATtiny88__)
- // this gets called every 2 milliseconds
-  counter += 2;
-  // every 20 milliseconds, refresh the servos!
-  if (counter >= 20) {
-    counter = 0;
-    servo1.refresh();
-    servo2.refresh();
-
-    #ifdef WALSH85
-    servo3.refresh();
-    #endif
-  }
-#endif      
+#endif  
 }
 
 /**
